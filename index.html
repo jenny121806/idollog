@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idollog | 追星生存指南</title>
+  <!-- 引入 Tailwind CSS 進行快速排版與響應式設計 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandPink: '#E83E8C',     // 主重點色：桃粉色
+            brandGreen: '#48BB78',    // 輔助互動色：青綠色
+            brandLavender: '#F4F3F7', // 柔和背景色：薰衣草灰
+            brandText: '#2D3748',     // 深灰文字
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* 確保手機版絕對不會左右破版捲動 */
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-white text-brandText font-sans antialiased">
+
+  <!-- 1. 導覽列 -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+      <!-- Logo -->
+      <a href="#top" class="text-2xl font-extrabold tracking-tight text-brandPink">
+        Idollog
+      </a>
+      
+      <!-- 導覽連結 -->
+      <nav class="flex flex-wrap items-center gap-4 text-sm sm:text-base font-medium text-brandText">
+        <a href="#top" class="hover:text-brandPink transition">首頁</a>
+        <a href="#venues" class="hover:text-brandPink transition">場館攻略</a>
+        <a href="#ticketing" class="hover:text-brandPink transition">搶票指南</a>
+        <a href="#gear" class="hover:text-brandPink transition">現場裝備</a>
+        <a href="#about" class="hover:text-brandPink transition">關於本站</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 2. 主視覺 (Hero Section) -->
+    <section class="relative bg-gradient-to-br from-purple-900 via-pink-800 to-brandPink text-white py-20 px-4">
+      <div class="max-w-3xl mx-auto text-center space-y-6">
+        <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full">
+          🎤 演唱會追星族必備工具箱
+        </span>
+        
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+          Idollog 追星生存指南
+        </h1>
+        
+        <p class="text-base sm:text-xl text-pink-100 max-w-2xl mx-auto leading-relaxed">
+          收錄演唱會搶票技巧、各大場館視野避坑與散場交通指南
+        </p>
+        
+        <div class="pt-4">
+          <a href="#venues" class="inline-block bg-brandPink hover:bg-pink-600 text-white font-bold text-base sm:text-lg px-8 py-4 rounded-full shadow-lg border-2 border-white/30 transition transform hover:-translate-y-0.5">
+            探索場館攻略 ↓
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 三大核心服務 -->
+    <section class="py-16 px-4 max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-brandText">三大核心服務</h2>
+        <p class="text-gray-500 mt-2 text-sm sm:text-base">從搶票前夕到進場應援，陪你搞定每一場線下演出</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 卡片 1 -->
+        <a href="#venues" class="group block bg-brandLavender rounded-2xl p-6 border border-transparent hover:border-brandPink/40 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-brandPink/10 text-brandPink flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+            🏟️
+          </div>
+          <h3 class="text-xl font-bold text-brandText group-hover:text-brandPink transition">場館攻略</h3>
+          <p class="text-gray-600 mt-2 text-sm sm:text-base leading-relaxed">
+            各大場館實測視野與避坑指南。
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-brandPink">前往查看 →</span>
+        </a>
+
+        <!-- 卡片 2 -->
+        <a href="#ticketing" class="group block bg-brandLavender rounded-2xl p-6 border border-transparent hover:border-brandPink/40 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-brandPink/10 text-brandPink flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+            🎫
+          </div>
+          <h3 class="text-xl font-bold text-brandText group-hover:text-brandPink transition">搶票秘笈</h3>
+          <p class="text-gray-600 mt-2 text-sm sm:text-base leading-relaxed">
+            各大售票平台實戰流程與技巧。
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-brandPink">前往查看 →</span>
+        </a>
+
+        <!-- 卡片 3 -->
+        <a href="#gear" class="group block bg-brandLavender rounded-2xl p-6 border border-transparent hover:border-brandPink/40 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-brandPink/10 text-brandPink flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+            🎒
+          </div>
+          <h3 class="text-xl font-bold text-brandText group-hover:text-brandPink transition">進場準備</h3>
+          <p class="text-gray-600 mt-2 text-sm sm:text-base leading-relaxed">
+            追星必備裝備清單與突發狀況應對。
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-brandPink">前往查看 →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 4. 場館攻略區塊 (含分頁切換與外部視野連結) -->
+    <section id="venues" class="py-16 px-4 bg-white border-t border-gray-100">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-10">
+          <span class="text-xs font-bold uppercase tracking-wider text-brandPink">實測視野與散場避坑</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-brandText mt-1">🏟️ 場館攻略</h2>
+          <p class="text-gray-500 mt-2 text-sm sm:text-base">點擊下方標籤切換「交通指南」、「推薦視野」與「避雷座位」</p>
+        </div>
+
+        <!-- 場館卡片容器 (薰衣草灰底色) -->
+        <div class="bg-brandLavender rounded-2xl p-6 sm:p-8 shadow-sm">
+          <!-- 場館標題與外部按鈕 -->
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-gray-200">
+            <div>
+              <span class="text-xs font-semibold bg-brandPink/10 text-brandPink px-2.5 py-1 rounded-full">熱門場館</span>
+              <h3 class="text-2xl font-bold text-brandText mt-2">臺北小巨蛋 (Arena)</h3>
+            </div>
+            <a href="https://twconcertview.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brandPink hover:bg-pink-600 text-white text-sm font-bold px-5 py-2.5 rounded-xl shadow transition">
+              <span>看詳細視野</span>
+              <span>↗</span>
+            </a>
+          </div>
+
+          <!-- 分頁切換按鈕 -->
+          <div class="flex flex-wrap gap-2 pt-6 pb-4">
+            <button onclick="switchTab('transport', event)" class="tab-btn active-tab px-4 py-2 rounded-xl text-sm font-bold bg-brandGreen text-white transition shadow-sm">
+              交通指南
+            </button>
+            <button onclick="switchTab('recommend', event)" class="tab-btn px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-600 hover:bg-gray-100 transition">
+              推薦視野
+            </button>
+            <button onclick="switchTab('avoid', event)" class="tab-btn px-4 py-2 rounded-xl text-sm font-bold bg-white text-gray-600 hover:bg-gray-100 transition">
+              避雷座位
+            </button>
+          </div>
+
+          <!-- 分頁內容區塊 -->
+          <div class="bg-white rounded-xl p-5 sm:p-6 shadow-sm mt-2">
+            <!-- 內容 1: 交通指南 -->
+            <div id="tab-transport" class="tab-content space-y-3">
+              <h4 class="font-bold text-brandText text-lg">🚇 捷運與散場交通攻略</h4>
+              <ul class="list-disc list-inside space-y-2 text-sm sm:text-base text-gray-600 leading-relaxed">
+                <li><strong>捷運搭乘</strong>：搭乘松山新店線至「台北小巨蛋站」2號出口步行即達。</li>
+                <li><strong>散場避坑</strong>：散場時2號出口人潮非常擁擠，建議散場後步行至鄰近的南京三民站或忠孝敦化站搭車，可避開最塞的人潮。</li>
+              </ul>
+            </div>
+
+            <!-- 內容 2: 推薦視野 -->
+            <div id="tab-recommend" class="tab-content hidden space-y-3">
+              <h4 class="font-bold text-brandText text-lg">✨ 推薦視野座位</h4>
+              <ul class="list-disc list-inside space-y-2 text-sm sm:text-base text-gray-600 leading-relaxed">
+                <li><strong>特區 (Floor)</strong>：搖滾區前段能超近距離看見偶像，互動感極佳。</li>
+                <li><strong>黃色視野 (25區、26區)</strong>：正對舞台中央，雖然距離稍遠，但能完整欣賞全場燈光應援與走位編排。</li>
+              </ul>
+            </div>
+
+            <!-- 內容 3: 避雷座位 -->
+            <div id="tab-avoid" class="tab-content hidden space-y-3">
+              <h4 class="font-bold text-brandText text-lg">⚠️ 避雷座位注意</h4>
+              <ul class="list-disc list-inside space-y-2 text-sm sm:text-base text-gray-600 leading-relaxed">
+                <li><strong>紅/紫二樓靠主舞台兩側</strong>：視線極度容易受到舞台邊緣音響架或道具遮蔽（俗稱視線不良區）。</li>
+                <li><strong>三樓高處</strong>：坡度較陡，有懼高症或需要看清表情者建議搭配 8-10 倍望遠鏡。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 搶票指南區塊 -->
+    <section id="ticketing" class="py-16 px-4 bg-brandLavender border-t border-gray-100">
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brandPink">實戰技巧</span>
+            <h2 class="text-2xl font-bold text-brandText mt-1">🎫 搶票指南與實戰避坑</h2>
+          </div>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            搶票時除了網路速度外，熟練售票系統（如拓元、KKTIX）的購票流程更是關鍵。建議開賣前 10 分鐘登入帳號、先綁定好付款信用卡，並確認身分驗證碼輸入手速！
+          </p>
+          <div class="bg-brandLavender p-4 rounded-xl text-sm text-gray-700">
+            💡 <strong>小撇步</strong>：遇到驗證碼時不要慌張，看清楚大小寫，雙螢幕或手機電腦同時開著更有機會提高搶票成功率。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 現場必備檢查清單 (Checklist) -->
+    <section id="gear" class="py-16 px-4 bg-white border-t border-gray-100">
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-brandLavender rounded-2xl shadow-sm border border-gray-200 p-6 sm:p-8">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-brandPink">出發前再確認一次</span>
+              <h2 class="text-2xl font-bold text-brandText mt-1">✅ 現場必備檢查清單</h2>
+            </div>
+            <div class="flex items-center gap-3">
+              <span id="checklist-counter" class="text-sm font-semibold px-3 py-1 rounded-full bg-white text-brandText shadow-sm">
+                已完成 0 / 5
+              </span>
+              <button onclick="resetChecklist()" class="text-xs text-gray-400 hover:text-brandPink underline transition">
+                全部重設
+              </button>
+            </div>
+          </div>
+
+          <p class="text-sm text-gray-500 mb-5">點擊下方項目即可打勾標記，出門前不漏帶任何應援神器！</p>
+
+          <ul id="checklist-items" class="space-y-3">
+            <li onclick="toggleCheck(this)" class="checklist-row cursor-pointer flex items-center gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-brandGreen transition select-none shadow-sm">
+              <div class="check-box w-6 h-6 rounded-md border-2 border-gray-300 flex items-center justify-center text-white font-bold transition">✓</div>
+              <span class="item-text text-base font-medium text-brandText transition">門票／身分證件</span>
+            </li>
+            <li onclick="toggleCheck(this)" class="checklist-row cursor-pointer flex items-center gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-brandGreen transition select-none shadow-sm">
+              <div class="check-box w-6 h-6 rounded-md border-2 border-gray-300 flex items-center justify-center text-white font-bold transition">✓</div>
+              <span class="item-text text-base font-medium text-brandText transition">手燈與備用電池</span>
+            </li>
+            <li onclick="toggleCheck(this)" class="checklist-row cursor-pointer flex items-center gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-brandGreen transition select-none shadow-sm">
+              <div class="check-box w-6 h-6 rounded-md border-2 border-gray-300 flex items-center justify-center text-white font-bold transition">✓</div>
+              <span class="item-text text-base font-medium text-brandText transition">行動電源 + 充電線</span>
+            </li>
+            <li onclick="toggleCheck(this)" class="checklist-row cursor-pointer flex items-center gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-brandGreen transition select-none shadow-sm">
+              <div class="check-box w-6 h-6 rounded-md border-2 border-gray-300 flex items-center justify-center text-white font-bold transition">✓</div>
+              <span class="item-text text-base font-medium text-brandText transition">8-10 倍望遠鏡</span>
+            </li>
+            <li onclick="toggleCheck(this)" class="checklist-row cursor-pointer flex items-center gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-brandGreen transition select-none shadow-sm">
+              <div class="check-box w-6 h-6 rounded-md border-2 border-gray-300 flex items-center justify-center text-white font-bold transition">✓</div>
+              <span class="item-text text-base font-medium text-brandText transition">喉糖潤唇膏</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 關於本站區塊 -->
+    <section id="about" class="py-16 px-4 bg-gradient-to-br from-purple-900 via-pink-800 to-brandPink text-white text-center">
+      <div class="max-w-2xl mx-auto space-y-6">
+        <h2 class="text-2xl sm:text-3xl font-bold">關於本站</h2>
+        <p class="text-pink-100 text-sm sm:text-base leading-relaxed">
+          Idollog 是一個專為演唱會追星族打造的生存指南網站。希望透過真實的場館視野、交通與搶票經驗分享，陪伴每一位追星人順利抵達現場，見到最想見的人！
+        </p>
+        <div class="pt-2">
+          <span class="text-xs text-pink-200">2026 Idollog 你的追星好夥伴</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 互動腳本 -->
+  <script>
+    /* 場館分頁切換功能 */
+    function switchTab(tabId, event) {
+      // 隱藏所有分頁內容
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+      // 顯示點擊的對應分頁
+      document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+      // 移除所有按鈕的高亮樣式
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-brandGreen', 'text-white', 'shadow-sm', 'active-tab');
+        btn.classList.add('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+      });
+
+      // 為點擊的按鈕加上青綠色高亮
+      event.currentTarget.classList.remove('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+      event.currentTarget.classList.add('bg-brandGreen', 'text-white', 'shadow-sm', 'active-tab');
+    }
+
+    /* Checklist 點擊打勾功能 */
+    function toggleCheck(row) {
+      const isChecked = row.classList.toggle('checked');
+      const box = row.querySelector('.check-box');
+      const text = row.querySelector('.item-text');
+
+      if (isChecked) {
+        row.classList.add('bg-green-50/65', 'border-brandGreen');
+        row.classList.remove('border-gray-200', 'bg-white');
+        box.classList.add('bg-brandGreen', 'border-brandGreen');
+        box.classList.remove('border-gray-300');
+        text.classList.add('line-through', 'text-gray-400');
+        text.classList.remove('text-brandText');
+      } else {
+        row.classList.remove('bg-green-50/65', 'border-brandGreen');
+        row.classList.add('border-gray-200', 'bg-white');
+        box.classList.remove('bg-brandGreen', 'border-brandGreen');
+        box.classList.add('border-gray-300');
+        text.classList.remove('line-through', 'text-gray-400');
+        text.classList.add('text-brandText');
+      }
+      updateCounter();
+    }
+
+    function updateCounter() {
+      const total = document.querySelectorAll('.checklist-row').length;
+      const checked = document.querySelectorAll('.checklist-row.checked').length;
+      const counter = document.getElementById('checklist-counter');
+      counter.textContent = `已完成 ${checked} / ${total}`;
+
+      if (checked === total) {
+        counter.classList.add('bg-brandGreen', 'text-white');
+        counter.classList.remove('bg-white', 'text-brandText');
+        counter.textContent = `🎉 全部準備完成 (${checked}/${total})`;
+      } else {
+        counter.classList.remove('bg-brandGreen', 'text-white');
+        counter.classList.add('bg-white', 'text-brandText');
+      }
+    }
+
+    function resetChecklist() {
+      document.querySelectorAll('.checklist-row.checked').forEach(row => {
+        toggleCheck(row);
+      });
+    }
+  </script>
+
+</body>
+</html>
